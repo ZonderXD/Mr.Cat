@@ -567,5 +567,5 @@ async def bank(ctx):
 
 
 
-token = open( 'token.txt', 'r' ).readline()
-bot.run( token )
+token = os.environ.get("Token")
+bot.run(str(token))

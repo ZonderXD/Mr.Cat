@@ -190,17 +190,6 @@ async def help(ctx):
 	await ctx.send( embed = emb )
 
 @bot.command()
-async def avatar(ctx, member : discord.Member = None):
-
-    user = ctx.message.author if (member == None) else member
-
-    embed = discord.Embed(title=f'** Аватар `{user}`**', color= 0x0c0c0c)
-
-    embed.set_image(url=user.avatar_url)
-
-    await ctx.send(embed=embed)
-
-@bot.command()
 async def password(ctx, lenght: int = None, number: int = None):
 
     if not lenght or not number:

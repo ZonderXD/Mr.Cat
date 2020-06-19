@@ -136,7 +136,6 @@ async def on_member_join( member ):
     emb = discord.Embed( description = f"**Приветствую тебя {member.mention}. Ты попал на сервер `{member.guild.name}`. Удачи тебе на сервере! 😜**", color = 0xda4a )
     role = discord.utils.get( member.guild.roles, id = 639584040982151178 ) # Айди роли которая будет выдаватся когда человек зашёл на сервер
 
-    await member.add_roles( role )
     channel = bot.get_channel( 662240129523646499 ) # Айди канала куда будет писатся сообщение
     await channel.send( embed = emb )
 
